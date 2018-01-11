@@ -1,2 +1,3 @@
 # Coursework Web Site
-Course site for my classes.
+Course site for m
+[View the site](https://johndoenma.github.io/coursework/)
