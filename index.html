@@ -2,26 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>John Doe's Student Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>John Doe</title>
+    <meta name="description" content="My NMA CLass Web Site." />
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- MAIN CSS FILE -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
+  <body class="page-home">
+    <header class="site-header">
+      <div class="site-id">
+        <h1><a href="index.html">John Doe</a></h1>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="notes/index.html">Notes</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <body>
-    <h1>
-      <a href="index.html">John Doe</a>
-    </h1>
-
-    <ul>
-      <li>
-        <a href="art128/index.html">ART 128</a>
-      </li>
-    </ul>
-
-    <h1>HI. I'm a NMA Interface Design Student</h1>
-    <p>
-      This is a class web site for all of the NMA interface design classes that
-      I am taking at KCC. I use this site to post all of my class assignments.
-    </p>
+    <main class="site-main">
+      <section class="hero">
+        <h2>Hi, I'm John.</h2>
+        <p>
+          I'm a fictional interface design student. This site is currently under
+          construction. Soon it will contain links to featured portfolio
+          projects and coursework for my classes at KCC within the New Media
+          Arts&nbsp;program.
+        </p>
+        <a class="button light" href="art128/index.html">Go to ART 128</a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav class="social-nav">
+        <ul>
+          <li><a href="https://github.com/johndoenma">Github</a></li>
+          <li><a href="https://codepen.io/johndoenma">Codepen</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
