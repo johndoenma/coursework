@@ -1,5 +1,30 @@
-/* ------------------------------------------------ */
-/* ---------------- GLOBAL STYLES  ---------------- */
+/* ----------------------------------------------- */
+/* ------------ CSS TABLE OF CONTENTS ------------ */
+/* ----------------------------------------------- 
+
+  #GLOBAL STYLES
+      #GLOBAL RESETS
+        #BOX-SIZING
+        #BODY MARGINS
+      #GLOBAL COLORS
+        #BODY
+        #LINKS
+      #GLOBAL TYPOGRAPHY
+        #BODY
+        #HEADINGS
+        #PARAGRAPHS
+        #LINKS
+        #LISTS
+        #DEFINITION LISTS
+        #CODE BLOCKS
+      #GLOBAL HELPERS
+        #HIDE VISUALLY
+
+    #STRUCTURAL STYLES
+
+
+ ------------------------------------------------ */
+/* --------------- GLOBAL STYLES  ---------------- */
 /* ------------------------------------------------ */
 
 /* GLOBAL RESETS */
@@ -25,22 +50,67 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 88.75%;
 }
+
+/* HEADINGS */
 h1,
 h2,
 h3,
 h4 {
   font-weight: normal;
 }
-a {
-  text-decoration: none;
-}
+
+/* PARAGRAPHS */
 p {
   max-width: 30em;
 }
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* LISTS */
+ul {
+  padding-left: 1.5em; 
+}
+li {
+  overflow-wrap: break-word;
+}
+
+/* DEFINITION LISTS */
 dt {
   font-weight: bold;
   margin-top: 1em;
 }
+dd {
+  margin: 0;
+}
+
+/* CODE BLOCKS */
+pre code {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: block;
+  padding: 2em 2em 1em 2em;
+}
+
+/* GLOBAL HELPERS */
+
+.hide-visually {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 4em 0;
+}
+
 /* GLOBAL MEDIA */
 img {
   max-width: 100%;
@@ -58,12 +128,14 @@ img {
 /* ------------------------------------------------ */
 
 body {
-  /* background-color: #004e92; */
-  /* background-image: linear-gradient(to right, #000428, #004e92); */
-  color: rgba(255, 255, 255, 1);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* MAIN CONTENT AREA */
+main {
+  flex-grow: 1;
 }
 
 /* SITE HEADER */
@@ -83,6 +155,11 @@ body {
   }
 }
 
+/* SITE FOOTER */
+.site-footer {
+  padding: 1em;
+  color: rgba(255, 255, 255, 1);
+}
 /* SITE ID */
 .site-id h1 {
   text-align: center;
@@ -91,6 +168,13 @@ body {
 }
 
 /* SITE NAV */
+@media (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .site-nav ul,
 .site-nav li {
   margin: 0;
@@ -103,30 +187,37 @@ body {
   justify-content: center;
   margin: 0.25em 0 0 0;
 }
-.site-nav li a {
+.site-nav a {
   display: block;
-  padding: 0.5em 0.75em;
+  padding: 0.5em;
+  margin: 0 .25em;
 }
 
-main {
-  flex-grow: 1;
-}
 
-/* SITE FOOTER */
-.site-footer a {
-  color: rgba(255, 255, 255, 1);
+/* SOCIAL NAV */
+.social-nav,
+.social-nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.social-nav ul {
+.social-nav {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 .social-nav a {
-  padding: 1em;
+  display: block;
+  padding: 0 .5em;
 }
+.social-nav img {
+  display: block;
+  margin-top: 6px;
+}
+
+
 /* SECTIONS */
-section,
-aside {
+section{
   padding: 2em 1em;
 }
 
@@ -161,6 +252,10 @@ aside {
 }
 
 /* SIDEBAR */
+.sidebar aside {
+  padding: 2em 1em;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     display: grid;
@@ -169,32 +264,47 @@ aside {
   .sidebar aside {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     margin: 2em 0;
-    padding: 0 1em 0 0;
+    padding: 0 1em;
   }
 }
 
 /* BUTTONS */
 .button {
   display: inline-block;
-  padding: 1em;
-  background-color: rgba(0, 51, 103, 1);
+  padding: 1em 1.5em;
+  background-color: rgba(0, 51, 103, .9);
+  border: 1px solid rgba(0, 51, 103, 0);
   color: rgba(255, 255, 255, 1);
+  border-radius: .5em;
+}
+.button:hover {
+  background-color: rgba(0, 51, 103, 1);
 }
 .button.light {
-  display: inline-block;
-  padding: 1em;
   background-color: transparent;
-  border: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
 }
-
-/* CODE BLOCKS */
-pre code {
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  display: block;
-  padding: 2em 2em 1em 2em;
+.button.light:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 51, 103, 1);
 }
+
+/* ICONS */
+.icon-social {
+  /* display: block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden; */
+}
+.icon-social img {
+  /* width: 30px; */
+  /* display: block; */
+}
+
+
+
+
 
 /* ------------------------------------------------ */
 /* ------------ PAGE-SPECIFIC STYLING  ------------ */
