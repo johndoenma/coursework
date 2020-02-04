@@ -39,10 +39,10 @@
     </section>
 
     <section>
-      <div class="container sidebar">
+      <div class="container two-col-sidebar">
         <aside>
           <h2>Contents</h2>
-          <ul>
+          <ol>
             <li>
               <a href="#intro">Introduction</a>
               <ul>
@@ -52,37 +52,38 @@
               </ul>
             </li>
             <li>
-              <a href="#code">Code Samples</a>
+              <a href="#setup">Getting Setup</a>
               <ul>
+                <li><a href="#folders">Folder Structure</a></li>
                 <li><a href="#html">Blank HTML Doc</a></li>
                 <li><a href="#css">Blank CSS Doc</a></li>
                 <li><a href="#js">Blank JS Doc</a></li>
               </ul>
             </li>
             <li>
-              <a href="#global-styles">Global &amp; Base Styles</a>
+              <a href="#base-styles">Base Styles</a>
               <ul>
                 <li><a href="#global-resets">Global Resets</a></li>
-                <li><a href="#global-colors">Base Color Set</a></li>
+                <li><a href="#global-colors">Global Colors</a></li>
+                <li><a href="#global-typography">Global Typography</a></li>
               </ul>
             </li>
             <li>
-              <a href="#ui-elements">UI Elements &amp; Components</a>
+              <a href="#ui-elements">UI Elements</a>
               <ul>
-                <li><a href="#typography">Base Typography</a></li>
                 <li><a href="#buttons">Buttons</a></li>
               </ul>
             </li>
 
             <li><a href="#glossary">Glossary</a></li>
-          </ul>
+          </ol>
         </aside>
 
         <div class="primary">
 
-          <h2 id="intro">Introduction</h2>
+          <h2 id="intro" class="sectionhead">Introduction</h2>
           <p id="about">
-            These are my notes taken while studying web design anf front-end web
+            This page contains my notes taken while studying web design anf front-end web
             development.
           </p>
 
@@ -107,31 +108,92 @@
             <li><a href="#">VS Code</a> (Code Editor)</li>
           </ul>
 
+          <hr />
 
-          <h2 id="code">Code Samples</h2>
+          <h2 id="setup" class="sectionhead">Getting Setup</h2>
 
-          <h3 id="html">Blank (Starter) HTML Document</h3>
-          <p>Example empty .html file:</p>
-          <script src="https://gist.github.com/kccnma/fa2f9586407d9485ebc8dba98d8b0b2b.js"></script>
-
-
-
-
-          <h2 id="ui-elements">UI Elements &amp; Base Styling</h2>
-
-          <h3 id="typography">Base Typography</h3>
-
-          <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;h3&gt;Heading 3&lt;/h3&gt;
-            </code></pre>
-
-          <pre><code>h1, h2, h3 {
-  font-weight: normal;
-}
+          <h3 id="folders">Project-based Folder Structure</h3>
+          <pre><code>
+projectname/
+├── <a href="https://gist.github.com/johndoenma/696e1b3bc6e5b9d001e1129cd5c8b118">index.html</a>
+├── css/
+│   ├── <a href="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12">style.css</a>
+└── js/
+    ├── <a href="#">scripts.js</a>
+                
             </code></pre>
 
           <hr />
+
+          <h3 id="html">Blank HTML Document</h3>
+          <p>Example index.html file:</p>
+          <script src="https://gist.github.com/johndoenma/696e1b3bc6e5b9d001e1129cd5c8b118.js"></script>
+
+
+          <hr />
+
+          <h3 id="css">Blank CSS Document</h3>
+          <p>Example style.css file with a CSS Table of Contents:</p>
+          <script src="https://gist.github.com/johndoenma/5abb1b0fb4eb4a8a0f864266ebaa1fe4.js"></script>
+
+
+          <hr />
+
+
+          <h2 id="base-styles" class="sectionhead">Base Styles</h2>
+
+
+
+          <h3 id="global-reset">CSS Global Reset</h3>
+          <script src="https://gist.github.com/johndoenma/5ef7eb0b89ca05fe451f3fa2950da32e.js"></script>
+
+
+          <hr />
+
+          <h3 id="global-colors">CSS Global Colors</h3>
+
+          <script src="https://gist.github.com/johndoenma/363ad9d4af5e678b9776cafa8a16d643.js"></script>
+
+
+          <hr />
+
+
+          <h3 id="global-typography">CSS Global Typography</h3>
+
+          <div class="markup-box">
+
+            <h1>This is a Heading 1</h1>
+            <h2>This is a Heading 2</h2>
+            <h3>This is a Heading 3</h3>
+
+            <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <ul>
+              <li>This is an Unordered List Item</li>
+              <li>This is an Unordered List Item</li>
+              <li>This is an Unordered List Item</li>
+            </ul>
+
+            <ol>
+              <li>This is an Ordered List Item</li>
+              <li>This is an Ordered List Item</li>
+              <li>This is an Ordered List Item</li>
+            </ol>
+
+            <p>This is a <a href="#">link</a>.</p>
+
+          </div>
+
+          <script src="https://gist.github.com/johndoenma/5b875c1db2658e181587e8be6394fbea.js"></script>
+
+          <script src="https://gist.github.com/johndoenma/5045d389a3c941a2f31edb66c116a1a7.js"></script>
+
+
+          <hr />
+
+
+          <h2 id="ui-elements" class="sectionhead">UI Elements</h2>
+
 
           <h3 id="buttons">Buttons</h3>
 
@@ -148,8 +210,28 @@
 }
           </code></pre>
 
+          <hr />
 
-          <h2 id="glossary">Glossary of Terms:</h2>
+
+
+
+          <h2 id="glossary" class="sectionhead">Helpful CLI Commands:</h2>
+
+
+          <pre><code>
+pwd 
+
+ls 
+
+cd Desktop
+
+git clone https://github.com/username/reponame
+                    </code></pre>
+
+
+          <hr />
+
+          <h2 id="glossary" class="sectionhead">Glossary of Terms:</h2>
           <dl>
             <dt>CLI</dt>
             <dd>Command Line Interface</dd>
